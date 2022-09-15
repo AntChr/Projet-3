@@ -401,6 +401,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.restaurant__heading__titre {
+  font-family: "Shrikhand", sans-serif;
+}
 .restaurant__heading__icon {
   display: flex;
   margin-top: auto;

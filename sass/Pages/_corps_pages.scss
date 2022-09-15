@@ -30,6 +30,10 @@
     {
         display: flex;
         justify-content: space-between;
+        &__titre
+        {
+            font-family: $police2;
+        }
 
         &__icon
         {
