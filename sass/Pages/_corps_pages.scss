@@ -1,0 +1,189 @@
+.corps__restaurant
+{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-bg-grey;
+    
+}
+.restaurant__img
+{
+    width: auto;
+    position: relative;
+    img
+    {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+}
+.restaurant
+{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-bg-grey;
+    padding: 10px;
+    position: relative;
+    bottom: 40px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    &__heading
+    {
+        display: flex;
+        justify-content: space-between;
+
+        &__icon
+        {
+           @include like;
+        }
+    }
+    &__menu
+    {
+        @include desktop-only{
+        display: flex;
+        justify-content: space-around;
+        width: auto;
+        
+    }
+        @include tablet-only{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: auto;
+        }
+    }
+        
+    &__bloc
+    {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop-only {
+            width: 30%;
+        }
+        @include tablet-only {
+            width: 40%;
+        }
+        &__titre
+        {
+            font-size: 0.95em;
+            padding-bottom: 6px;
+            width: 37px;
+            font-weight: normal;
+            border-bottom-width: 3px;
+            border-bottom-color: $color-tertiary;
+            border-bottom-style: solid;
+        }
+    }
+    &__container
+    {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 0px 8px rgba(202, 202, 202, 1);
+        margin-bottom: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        opacity: 0;
+        animation: TranslateUp 1s ease-in-out 1s 1 normal forwards;
+
+        @keyframes TranslateUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            33% {
+                opacity: 0.33;
+            }
+
+            66%{
+                opacity: 0.66;
+            }
+        
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        &__td
+        {
+            &__titre
+            {
+                margin: 10px 10px 2px 10px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                
+            }
+            &__description
+            {
+                margin: 0px 10px 10px 10px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                
+            }
+        }
+        &__prix
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            font-weight: bold;
+            margin: 0px 10px 10px 0px;
+        }
+        &__anim
+        {
+            display: none;
+
+        }
+        &:hover
+        {
+            .restaurant__container__anim{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 13%;
+                height: 62px;
+                background-color: $color-tertiary;
+                animation : backgreen 1s ease-in-out normal forwards;
+
+                @keyframes backgreen {
+                    0% {
+                        transform: translateX(100px);
+                    }
+                
+                    100% {
+                        transform: translateX(0px);
+                    }
+                }
+
+                i{
+                    background-color: white;
+                    color: $color-tertiary;
+                    border-radius: 60%;
+                    font-size: 1.5em;
+                    animation : Cochegreen 0.8s ease-in-out 0.4s 1 normal forwards;
+
+                    @keyframes Cochegreen {
+                        0% {
+                            transform: rotate(-360deg);
+                        }
+                    
+                        100% {
+                            transform: rotate(0);
+                        }
+                    }
+                }
+        }
+        }
+    }
+    &__btn
+    {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        @include btn-type;
+    }
+}
+

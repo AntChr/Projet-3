@@ -1,0 +1,291 @@
+.center-body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    position: fixed;
+    z-index:2;
+	width: 100%;
+	height: 100vh;
+    background-color: white;
+    visibility: visible;
+    animation: fadein 3s forwards;
+	/****** center box
+	width: 300px;
+	height: 300px;
+	border: solid 1px #aaa; */
+}
+.loader-circle-17 {
+	font-family: sans-serif;
+	width: 140px;
+	height: 140px;
+	line-height: 140px;
+	text-align: center;
+	color: #A8AAAD;
+	border-radius: 50%;
+	border: 2px solid #C9CBCC;
+	position: fixed;
+    z-index: 3;
+}
+.loader-circle-17:before {
+	content: 'ohmyfood';
+	font-size: 30px;
+}
+.loader-circle-17:after {
+	content: '';
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	border: 5px solid transparent;
+	border-top: 5px solid $color-primary;
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	animation: anm-loader-circle-17 2s ease infinite;
+	display: inline-block;
+}
+@keyframes anm-loader-circle-17 {
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes fadein {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+body
+{
+    margin: 0px;
+}
+.exp_fonct
+{
+    @include desktop-only {
+        display: flex;
+        flex-direction: row-reverse;
+        width: auto;
+    }
+
+    @include tablet-only {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.exploration
+{
+    background-color: $color-bg-grey;
+    width: auto;
+    align-items: center;
+    font-family: 'Roboto',sans-serif;
+    padding: 10px 20px 30px 20px;
+    @include desktop-only{
+        border: 2px solid white;
+        width: 50%;
+    }
+
+    &__heading
+    {
+        text-align: center;
+    }
+    &__byline
+    {
+        text-align: center;
+    }
+    &__btn
+    {
+        @include btn-type;
+    }
+
+}
+
+.fonctionnement
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    @include desktop-only{
+        width: 50%;
+    }
+    &__list
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        padding: 10px;
+        @include tablet-only {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        &__case
+        {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            background-color: $color-bg-grey;
+            box-shadow: 0 5px 5px rgba(202, 202, 202, 0.75);
+            border-radius: 15px;
+            width: 100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            @include tablet-only {
+                width: 31%;
+            }
+            &__n
+            {
+                position: relative;
+                right: 10px;
+                margin-right: 10px;
+                overflow: visible;
+                &__x
+                {
+                    background-color: $color-primary;
+                    color: white;
+                    border-radius: 50%;
+                    padding: 4px 8px 4px 8px;
+                }
+            }
+            i
+            {
+                margin-right: 20px;
+                color: gray;
+            }
+            &:hover
+            {
+                background-color: lighten($color-primary, 35%);
+                i
+                {
+                    color: $color-primary;
+                }
+            } 
+        }
+    }
+}
+
+.restaurants
+{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    background-color: $color-bg-grey;
+    padding: 10px;
+    &__list
+    {
+        display: flex;
+        flex-direction: column;
+        @include desktop-only{
+            
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-column-gap: 25px;
+                grid-row-gap: 25px;
+                
+        }
+        @include tablet-only{
+            
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 25px;
+            grid-row-gap: 25px;
+            
+    }
+        &__card
+        {
+            a
+            {
+                
+                display: block;
+                text-decoration: none;
+                color: black;
+                height: 286px;
+            }
+            a:visited
+            {
+                color:black
+            }
+            display: block;
+            background-color: white;
+            width: auto;
+            height: 286px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 5px rgba(202, 202, 202, 0.75);
+            border-radius: 15px;
+            &__img
+            {
+            
+                img
+                {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                overflow: hidden;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                
+                }
+            }
+        &__new
+        {
+            display: inline-block;
+            position: relative;
+            bottom: 98%;
+            left: 78%;
+            width: 90px;
+            height: 7%;
+            text-align: center;
+            overflow: visible;
+            @include desktop-only {
+                left: 81%;
+            }
+            @include tablet-only {
+                left: 73%;
+            }
+            
+            &__txt
+            {
+                background-color: $color-tertiary;
+                color: darken($color-tertiary, 40%);
+                font-weight: bold;
+                padding: 5px;
+                
+            }
+        }
+        &__dl
+        {
+            display: flex;
+            justify-content: space-between;
+            height: 30%;
+            &__description
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content:center;
+                height: 100%;
+                padding-left: 10px;
+                padding-bottom: 15px;
+                &__titre
+                {
+                    padding-top: 10px;
+                    margin: 0px;
+                }
+                &__lieu
+                {
+                    padding-bottom: 10px;
+                    margin: 0px;
+                }
+            }
+            &__like
+            {
+                @include like;
+            }
+        }
+        }
+    }
+}
+
