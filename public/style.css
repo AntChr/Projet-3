@@ -84,9 +84,9 @@
 
 .loader-circle-17 {
   font-family: sans-serif;
-  width: 140px;
-  height: 140px;
-  line-height: 140px;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
   text-align: center;
   color: #A8AAAD;
   border-radius: 50%;
@@ -99,12 +99,13 @@
   content: "ohmyfood";
   font-size: 30px;
   font-family: "Shrikhand", sans-serif;
+  color: black;
 }
 
 .loader-circle-17:after {
   content: "";
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 5px solid transparent;
   border-top: 5px solid #9356DC;
@@ -130,6 +131,7 @@
 }
 body {
   margin: 0px;
+  font-family: "Roboto", sans-serif;
 }
 
 @media screen and (min-width: 993px) {
@@ -180,8 +182,8 @@ body {
   cursor: pointer;
 }
 .exploration__btn:hover {
-  background: linear-gradient(-5deg, #9356DC 10%, #FF79DA, rgb(23, 23, 23) 140%);
-  box-shadow: 0 6px 6px rgba(202, 202, 202, 0.75);
+  background: linear-gradient(-5deg, #9356DC 10%, #FF79DA, rgb(255, 255, 255) 140%);
+  box-shadow: 0 6px 6px rgba(141, 140, 140, 0.9);
   transition-duration: 0.15s;
 }
 
@@ -470,24 +472,6 @@ body {
   margin-bottom: 20px;
   overflow: hidden;
   white-space: nowrap;
-  opacity: 0;
-  animation: TranslateUp 1s ease-in-out 1s 1 normal forwards;
-}
-@keyframes TranslateUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  33% {
-    opacity: 0.33;
-  }
-  66% {
-    opacity: 0.66;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 .restaurant__container__td {
   display: flex;
@@ -549,6 +533,66 @@ body {
     transform: rotate(0);
   }
 }
+.restaurant__anim1 {
+  opacity: 0;
+  animation: TranslateUp 1s ease-in-out 1s 1 normal forwards;
+}
+@keyframes TranslateUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  33% {
+    opacity: 0.33;
+  }
+  66% {
+    opacity: 0.66;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.restaurant__anim2 {
+  opacity: 0;
+  animation: TranslateUp 1s ease-in-out 2s 1 normal forwards;
+}
+@keyframes TranslateUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  33% {
+    opacity: 0.33;
+  }
+  66% {
+    opacity: 0.66;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.restaurant__anim3 {
+  opacity: 0;
+  animation: TranslateUp 1s ease-in-out 3s 1 normal forwards;
+}
+@keyframes TranslateUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  33% {
+    opacity: 0.33;
+  }
+  66% {
+    opacity: 0.66;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .restaurant__btn {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -566,8 +610,8 @@ body {
   cursor: pointer;
 }
 .restaurant__btn:hover {
-  background: linear-gradient(-5deg, #9356DC 10%, #FF79DA, rgb(23, 23, 23) 140%);
-  box-shadow: 0 6px 6px rgba(202, 202, 202, 0.75);
+  background: linear-gradient(-5deg, #9356DC 10%, #FF79DA, rgb(255, 255, 255) 140%);
+  box-shadow: 0 6px 6px rgba(141, 140, 140, 0.9);
   transition-duration: 0.15s;
 }
 
@@ -595,6 +639,7 @@ body {
 .footer__title {
   margin-bottom: 10px;
   font-family: "Shrikhand", sans-serif;
+  font-weight: normal;
 }
 .footer__list {
   display: flex;

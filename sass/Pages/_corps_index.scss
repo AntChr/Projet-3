@@ -16,9 +16,9 @@
 }
 .loader-circle-17 {
 	font-family: sans-serif;
-	width: 140px;
-	height: 140px;
-	line-height: 140px;
+	width: 200px;
+	height: 200px;
+	line-height: 200px;
 	text-align: center;
 	color: #A8AAAD;
 	border-radius: 50%;
@@ -30,11 +30,12 @@
 	content: 'ohmyfood';
 	font-size: 30px;
     font-family: $police2;
+    color: black;
 }
 .loader-circle-17:after {
 	content: '';
-	width: 140px;
-	height: 140px;
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
 	border: 5px solid transparent;
 	border-top: 5px solid $color-primary;
@@ -60,6 +61,7 @@
 body
 {
     margin: 0px;
+    font-family: $police1;
 }
 .exp_fonct
 {

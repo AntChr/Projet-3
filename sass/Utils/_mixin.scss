@@ -14,8 +14,8 @@
         cursor: pointer;
         &:hover
         {
-            background: linear-gradient(-5deg,$color-primary 10%,$color-secondary, rgb(23, 23, 23) 140%);
-            box-shadow: 0 6px 6px rgba(202, 202, 202, 0.75);
+            background: linear-gradient(-5deg,$color-primary 10%,$color-secondary, rgb(255, 255, 255) 140%);
+            box-shadow: 0 6px 6px rgba(141, 140, 140, 0.9);
             transition-duration: 0.15s;
         }
 }

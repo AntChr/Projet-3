@@ -1,6 +1,6 @@
 .footer
 {
-    font-family: 'Roboto',sans-serif;
+    font-family: $police1;
     color: white;
     background-color: lighten($color-bg-black,20%);
     width: auto;
@@ -18,7 +18,8 @@
     &__title
     {
         margin-bottom: 10px;
-        font-family: 'Shrikhand',sans-serif;
+        font-family: $police2;
+        font-weight: normal;
     }
     &__list
     {

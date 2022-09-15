@@ -55,6 +55,7 @@
             width: auto;
         }
     }
+
         
     &__bloc
     {
@@ -77,6 +78,7 @@
             border-bottom-color: $color-tertiary;
             border-bottom-style: solid;
         }
+        
     }
     &__container
     {
@@ -88,28 +90,7 @@
         margin-bottom: 20px;
         overflow: hidden;
         white-space: nowrap;
-        opacity: 0;
-        animation: TranslateUp 1s ease-in-out 1s 1 normal forwards;
-
-        @keyframes TranslateUp {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            33% {
-                opacity: 0.33;
-            }
-
-            66%{
-                opacity: 0.66;
-            }
         
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
         
         &__td
         {
@@ -190,6 +171,81 @@
                 }
         }
         }
+    }
+    &__anim1
+    {
+        opacity: 0;
+        animation: TranslateUp 1s ease-in-out 1s 1 normal forwards;
+
+    @keyframes TranslateUp {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        33% {
+            opacity: 0.33;
+        }
+
+        66%{
+            opacity: 0.66;
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    }
+    &__anim2
+    {
+        opacity: 0;
+        animation: TranslateUp 1s ease-in-out 2s 1 normal forwards;
+
+    @keyframes TranslateUp {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        33% {
+            opacity: 0.33;
+        }
+
+        66%{
+            opacity: 0.66;
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    }
+    &__anim3
+    {
+        opacity: 0;
+        animation: TranslateUp 1s ease-in-out 3s 1 normal forwards;
+
+    @keyframes TranslateUp {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        33% {
+            opacity: 0.33;
+        }
+
+        66%{
+            opacity: 0.66;
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
     }
     &__btn
     {
