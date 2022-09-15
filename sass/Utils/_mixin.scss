@@ -1,7 +1,8 @@
 @mixin btn-type
 {
     display: block;
-        background-color: $color-primary;
+        background: linear-gradient(-5deg,$color-primary 10%,$color-secondary);
+        background-color: dimgray;
         color: $color-bg-white;
         width: 200px;
         margin-left: auto;
@@ -10,10 +11,12 @@
         box-shadow: 0 3px 3px rgba(202, 202, 202, 0.75);
         border-radius: 20px;
         border: transparent;
+        cursor: pointer;
         &:hover
         {
-            background-color: lighten($color-primary, 10%);
+            background: linear-gradient(-5deg,$color-primary 10%,$color-secondary, rgb(23, 23, 23) 140%);
             box-shadow: 0 6px 6px rgba(202, 202, 202, 0.75);
+            transition-duration: 0.15s;
         }
 }
 @mixin like
