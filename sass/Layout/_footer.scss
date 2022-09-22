@@ -48,7 +48,15 @@
             {
                 display: flex;
                 align-items: center;
-                margin-right: 10px;
+
+                .fa-solid.fa-utensils
+                {
+                    margin-right: 10px;
+                }
+                .fa-solid.fa-handshake-angle
+                {
+                    margin-right: 5px;
+                }
                 
             }
         }
