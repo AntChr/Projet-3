@@ -26,22 +26,41 @@
     margin-bottom: auto;
     padding-right: 30px;
     font-size: 1.4em;
+    
     .fa-solid.fa-heart
     {
         display: none;
     }
     &:hover
     {
+        
         .fa-regular.fa-heart
         {
             display: none;
         }
         .fa-solid.fa-heart
         {
-            display: flex;
+            display: initial;
             position: relative;
             z-index: 1;
-            color: $color-primary;
+            background: linear-gradient(-5deg,$color-primary 10%,$color-secondary, rgb(255, 255, 255) 140%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            scale: 0;
+            animation: Apparition 1.5s ease forwards;
+            
+            @keyframes Apparition 
+            {
+                0% {
+                    scale: 0;
+                }
+                
+                100% {
+                    scale: 1;
+                }
+            }
+            
         }
     }
 }

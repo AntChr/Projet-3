@@ -245,6 +245,7 @@ body {
 }
 .fonctionnement__list__case:hover i {
   color: #9356DC;
+  transition-duration: 1.5s;
 }
 
 .restaurants {
@@ -363,10 +364,23 @@ body {
   display: none;
 }
 .restaurants__list__card__dl__like:hover .fa-solid.fa-heart {
-  display: flex;
+  display: initial;
   position: relative;
   z-index: 1;
-  color: #9356DC;
+  background: linear-gradient(-5deg, #9356DC 10%, #FF79DA, rgb(255, 255, 255) 140%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  scale: 0;
+  animation: Apparition 1.5s ease forwards;
+}
+@keyframes Apparition {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
 }
 
 .corps__restaurant {
@@ -416,10 +430,23 @@ body {
   display: none;
 }
 .restaurant__heading__icon:hover .fa-solid.fa-heart {
-  display: flex;
+  display: initial;
   position: relative;
   z-index: 1;
-  color: #9356DC;
+  background: linear-gradient(-5deg, #9356DC 10%, #FF79DA, rgb(255, 255, 255) 140%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  scale: 0;
+  animation: Apparition 1.5s ease forwards;
+}
+@keyframes Apparition {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
 }
 @media screen and (min-width: 993px) {
   .restaurant__menu {
